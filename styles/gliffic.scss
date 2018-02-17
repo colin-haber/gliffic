@@ -1,0 +1,117 @@
+input,
+th,
+td {
+	padding: unset;
+}
+input {
+	border: unset;
+}
+body,
+h1,
+p {
+	margin: unset;
+}
+td,
+th {
+	text-align: unset;
+}
+h1,
+input,
+th {
+	font: unset;
+}
+abbr[title] {
+	text-decoration: unset;
+}
+input {
+	background: unset;
+}
+:focus {
+	outline: unset;
+}
+
+$color-primary: #3498DB;
+$color-dark: #324755;
+$color-light: #F9FAFC;
+$color-secondary: #E74C3C;
+
+:root {
+	height: 100%;
+}
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	font: 1em/1.2 "Roboto", sans-serif;
+	color: $color-dark;
+	background: $color-light;
+	.app-header {
+		flex: 0 0 auto;
+		padding: 0.6em 1em;
+		h1 {
+			text-align: center;
+			svg {
+				height: 1em;
+				fill: currentColor;
+			}
+		}
+	}
+	.app-main {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		overflow: hidden;
+	}
+}
+
+.control {
+	display: flex;
+	flex: 0 0 auto;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+	.control-search {
+		display: block;
+		box-sizing: border-box;
+		flex: 1 1 auto;
+		padding: 0.6em 1em;
+		border-bottom: 1px solid $color-primary;
+	}
+	.control-submit {
+		display: block;
+		box-sizing: border-box;
+		padding: 0.6em 1em;
+		color: white;
+		background-color: $color-primary;
+		cursor: pointer;
+	}
+}
+
+.glyphs {
+	display: block;
+	flex: 1 1 auto;
+	border-collapse: collapse;
+	overflow-y: auto;
+	tbody {
+		display: grid;
+		grid-template-columns: min-content min-content auto;
+	}
+	td,
+	th {
+		padding: 0.6em 1em;
+		vertical-align: text-top;
+	}
+	tr {
+		display: contents;
+		border-bottom: 1px solid #CCC;
+	}
+}
+
+.glyph {
+	.glyph-char {
+		text-align: center;
+		white-space: pre-wrap;
+	}
+	.glyph-hex {
+		text-align: right;
+		font-family: "Roboto Mono", monospace;
+	}
+}
