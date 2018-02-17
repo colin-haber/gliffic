@@ -134,9 +134,16 @@ $color-secondary: #E74C3C;
 	.glyph-char {
 		text-align: center;
 		white-space: pre-wrap;
+		&.-bismillah {
+			font-family: "Segoe UI", "Roboto", sans-serif;
+		}
 	}
 	.glyph-hex {
 		text-align: right;
 		font-family: "Roboto Mono", monospace;
+	}
+	.glyph-name {
+		word-break: break-word;
+		hyphens: auto;
 	}
 }

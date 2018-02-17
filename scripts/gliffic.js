@@ -26,7 +26,9 @@ var Gliffic = Gliffic || {
 		template.parentElement.querySelectorAll(".glyph").forEach(element => element.remove());
 		set.forEach(codepoint => {
 			let frag = template.content.cloneNode(true);
-			if (!codepoint.category.match(/C[con]/)) frag.querySelector(".glyph-char").textContent = codepoint.value;
+			let char = frag.querySelector(".glyph-char");
+			if (!codepoint.category.match(/C[con]/)) char.textContent = codepoint.value;
+			if (codepoint.index === 0xFDFD) char.classList.add("-bismillah");
 			frag.querySelector(".glyph-hex").textContent = codepoint.hex;
 			frag.querySelector(".glyph-name").textContent = codepoint.name;
 			template.parentElement.appendChild(document.importNode(frag, true));
